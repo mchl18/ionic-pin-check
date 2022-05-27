@@ -1,13 +1,18 @@
 # pin-check
 
-A plugin to check for pin check on both iOS and android for ionic
+A capicator plugin to check on iOS / Android devices if the password pin is enabled or not on the mobile device.
 
 ## Install
 
 ```bash
-npm install pin-check
+npm install @creativecookie/pin-check
 npx cap sync
 ```
+
+## USAGE IN IONIC 5/6
+1. After installing include in the module page that you want to use with the import below
+2. import { PinCheck } from '@creativecookie/pin-check';
+3. in your function, (await PinCheck.pinCheck()).value will return either true or false
 
 ## API
 
