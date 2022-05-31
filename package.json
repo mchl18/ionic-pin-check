@@ -1,6 +1,6 @@
 {
   "name": "@creativecookie/pin-check",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "description": "A plugin to check for pin check on both iOS and android for ionic",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -11,7 +11,7 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "PinCheck.podspec"
+    "CreativecookiePinCheck.podspec"
   ],
   "author": "Mark Ng",
   "license": "MIT",

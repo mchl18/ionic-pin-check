@@ -1,11 +1,36 @@
-package com.creativecookie.plugin.pincheck;
+package com.creativecookie.plugins.pincheck;
 
 import android.util.Log;
+import android.os.Build;
+import android.content.Context;
+import android.app.KeyguardManager;
 
-public class PinCheck {
+import com.getcapacitor.JSObject;
+import com.getcapacitor.Plugin;
+import com.getcapacitor.PluginCall;
+import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.CapacitorPlugin;
+@CapacitorPlugin(name = "PinCheck")
+public class PinCheck extends Plugin {
 
-    public String pinCheck(String value) {
-        Log.i("Echo", value);
-        return value;
+    boolean status;
+
+    @PluginMethod
+    public void pinCheck(PluginCall call) {
+        try {
+            KeyguardManager keyguardManager = (KeyguardManager) this.getContext().getSystemService(Context.KEYGUARD_SERVICE);
+            System.out.println(keyguardManager.isKeyguardSecure());
+            if (keyguardManager.isKeyguardSecure()) {
+                status = true;
+            } else {
+                status = false;
+            }
+            System.out.println(status);
+            JSObject ret = new JSObject();
+            ret.put("value", status);
+            call.resolve(ret);
+        } catch (Exception ex) {
+            call.reject(ex.getLocalizedMessage());
+        }
     }
 }
