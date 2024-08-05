@@ -1,3 +1,3 @@
 export interface PinCheckPlugin {
-  pinCheck(): Promise<{ value: string }>
+  pinCheck(): Promise<{ value: boolean }>
 }

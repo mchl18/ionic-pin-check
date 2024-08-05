@@ -28,10 +28,10 @@ npx cap sync
 ### pinCheck()
 
 ```typescript
-pinCheck() => Promise<{ value: string; }>
+pinCheck() => Promise<{ value: boolean; }>
 ```
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ value: boolean; }&gt;</code>
 
 --------------------
 
