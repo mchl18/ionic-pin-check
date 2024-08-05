@@ -20,11 +20,7 @@ public class PinCheck extends Plugin {
         try {
             KeyguardManager keyguardManager = (KeyguardManager) this.getContext().getSystemService(Context.KEYGUARD_SERVICE);
             System.out.println(keyguardManager.isKeyguardSecure());
-            if (keyguardManager.isKeyguardSecure()) {
-                status = true;
-            } else {
-                status = false;
-            }
+            status = keyguardManager.isKeyguardSecure();
             System.out.println(status);
             JSObject ret = new JSObject();
             ret.put("value", status);
