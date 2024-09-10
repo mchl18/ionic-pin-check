@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { PinCheckPlugin } from './definitions';
+import type { DeviceSecurityPlugin } from './definitions';
 
-const PinCheck = registerPlugin<PinCheckPlugin>('PinCheck', {
-  web: () => import('./web').then(m => new m.PinCheckWeb()),
+const DeviceSecurity = registerPlugin<DeviceSecurityPlugin>('DeviceSecurity', {
+  web: () => import('./web').then(m => new m.DeviceSecurityWeb()),
 });
 
 export * from './definitions';
-export { PinCheck };
+export { DeviceSecurity };

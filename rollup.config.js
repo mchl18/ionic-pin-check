@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'capacitorPinCheck',
+      name: 'capacitorDeviceSecurity',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },

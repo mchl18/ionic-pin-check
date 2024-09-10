@@ -5,10 +5,10 @@ import LocalAuthentication
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
  */
-@objc(PinCheckPlugin)
-public class PinCheckPlugin: CAPPlugin {
+@objc(DeviceSecurityPlugin)
+public class DeviceSecurityPlugin: CAPPlugin {
     
-    private let implementation = PinCheck()
+    private let implementation = DeviceSecurity()
 
     @objc func pinCheck(_ call: CAPPluginCall) {
         let context = LAContext();

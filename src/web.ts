@@ -1,12 +1,12 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { PinCheckPlugin } from './definitions';
+import type { DeviceSecurityPlugin } from './definitions';
 
-export class PinCheckWeb extends WebPlugin implements PinCheckPlugin {
-  async pinCheck(): Promise<{ value: string }> {
+export class DeviceSecurityWeb extends WebPlugin implements DeviceSecurityPlugin {
+  async pinCheck(): Promise<{ value: boolean }> {
     console.log('pin check not working on web');
     return {
-      value : 'false'
+      value : false
     }
   }
 }

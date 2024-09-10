@@ -1,3 +1,3 @@
-export interface PinCheckPlugin {
-  pinCheck(): Promise<{ value: string }>
+export interface DeviceSecurityPlugin {
+  pinCheck(): Promise<{ value: boolean }>
 }

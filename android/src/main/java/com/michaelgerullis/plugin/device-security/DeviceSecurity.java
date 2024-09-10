@@ -11,8 +11,8 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "PinCheck")
-public class PinCheck extends Plugin {
+@CapacitorPlugin(name = "DeviceSecurity")
+public class DeviceSecurity extends Plugin {
     @PluginMethod
     public void pinCheck(PluginCall call) {
         try {
