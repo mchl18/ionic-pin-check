@@ -1,4 +1,4 @@
-package com.creativecookie.plugins.pincheck;
+package com.michaelgerullis.plugins.devicesecurity;
 
 import android.util.Log;
 import android.os.Build;
@@ -10,24 +10,15 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+
 @CapacitorPlugin(name = "PinCheck")
 public class PinCheck extends Plugin {
-
-    boolean status;
-
     @PluginMethod
     public void pinCheck(PluginCall call) {
         try {
             KeyguardManager keyguardManager = (KeyguardManager) this.getContext().getSystemService(Context.KEYGUARD_SERVICE);
-            System.out.println(keyguardManager.isKeyguardSecure());
-            if (keyguardManager.isKeyguardSecure()) {
-                status = true;
-            } else {
-                status = false;
-            }
-            System.out.println(status);
             JSObject ret = new JSObject();
-            ret.put("value", status);
+            ret.put("value", keyguardManager.isKeyguardSecure());
             call.resolve(ret);
         } catch (Exception ex) {
             call.reject(ex.getLocalizedMessage());
