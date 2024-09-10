@@ -1,6 +1,6 @@
 {
   "name": "capacitor-device-security-mgerullis",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A plugin to check for pin check on both iOS and android for ionic",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Latrixz/ionic-pin-check.git"
+    "url": "git+https://github.com/mchl18/ionic-pin-check.git"
   },
   "bugs": {
-    "url": "https://github.com/Latrixz/ionic-pin-check/issues"
+    "url": "https://github.com/mchl18/ionic-pin-check/issues"
   },
   "keywords": [
     "capacitor",
